@@ -6,13 +6,16 @@
   Create a constructor function named CuboidMaker that accepts properties for length, width, and height
 */
 
+//constructor function 
 function CuboidMaker(attributes) {
   this.length = attributes.length;
   this.width = attributes.width;
   this.height = attributes.height;
+  //method for volume
   this.volume = function volume() {
     return this.length * this.width * this.height;
   };
+  //method for surface area
   this.surfaceArea = function surfaceArea() {
     return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
   };
@@ -36,7 +39,8 @@ function CuboidMaker(attributes) {
   Add properties and values of length: 4, width: 5, and height: 5 to cuboid.   
 */
 
-const cuboid = new CuboidMaker ({
+//object created using (new) to test constructor function
+const cuboid = new CuboidMaker({
   length: 4,
   width: 5,
   height: 5,
